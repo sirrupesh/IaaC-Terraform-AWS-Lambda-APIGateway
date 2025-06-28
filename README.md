@@ -5,7 +5,7 @@ This project demonstrates Infrastructure as Code using Terraform to deploy a com
 ## Project Structure
 
 ```
-IAAC-LAMBDA-APIGATEWAY/
+IaaC-Terraform-AWS-Lambda-APIGateway/
 ├── main.tf                     # Main Terraform configuration
 ├── variables.tf                # Variable definitions
 ├── outputs.tf                  # Output definitions
