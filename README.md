@@ -2,6 +2,12 @@
 
 This project demonstrates Infrastructure as Code using Terraform to deploy a complete serverless architecture with AWS Lambda and API Gateway. The Lambda function performs mathematical operations (addition) and is exposed via a RESTful API.
 
+## Architecture Diagram
+
+![API Gateway Migration Architecture](./generated-diagrams/api_gateway_migration_architecture.png.png)
+
+The architecture diagram above illustrates the complete serverless infrastructure deployed by this Terraform project, showing the integration between API Gateway, Lambda functions, IAM roles, and API key management.
+
 ## Project Structure
 
 ```
