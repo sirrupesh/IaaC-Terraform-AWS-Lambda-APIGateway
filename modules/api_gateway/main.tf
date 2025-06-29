@@ -101,7 +101,7 @@ resource "aws_lambda_permission" "api_gateway_lambda" {
   statement_id  = "AllowExecutionFromAPIGateway"
   action        = "lambda:InvokeFunction"
   function_name = var.lambda_function_name
-  qualifier     = "QA-tested"  # Add the alias qualifier
+  qualifier     = var.lambda_alias_name
   principal     = "apigateway.amazonaws.com"
   
   # The source ARN is the API Gateway ARN

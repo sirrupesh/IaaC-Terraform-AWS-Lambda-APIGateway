@@ -27,3 +27,8 @@ variable "lambda_function_name" {
   description = "Name of the Lambda function"
   type        = string
 }
+
+variable "lambda_alias_name" {
+  description = "Name of the Lambda function alias"
+  type        = string
+}
