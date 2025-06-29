@@ -14,13 +14,13 @@ resource "aws_api_gateway_rest_api" "api" {
 resource "aws_api_gateway_resource" "n8n" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   parent_id   = aws_api_gateway_rest_api.api.root_resource_id
-  path_part   = "n8n"
+  path_part   = var.primary_resource_path
 }
 
 resource "aws_api_gateway_resource" "sum" {
   rest_api_id = aws_api_gateway_rest_api.api.id
   parent_id   = aws_api_gateway_resource.n8n.id
-  path_part   = "sum"
+  path_part   = var.secondary_resource_path
 }
 
 resource "aws_api_gateway_method" "post" {

@@ -29,6 +29,18 @@ variable "stage_name" {
   default     = "test"
 }
 
+variable "primary_resource_path" {
+  description = "Path part for the primary API resource"
+  type        = string
+  default     = "n8n"
+}
+
+variable "secondary_resource_path" {
+  description = "Path part for the secondary API resource"
+  type        = string
+  default     = "sum"
+}
+
 # Lambda variables
 variable "lambda_function_name" {
   description = "Name of the Lambda function"

@@ -26,6 +26,10 @@ module "api_gateway" {
   lambda_qualified_arn = module.lambda.lambda_qualified_arn
   lambda_function_name = module.lambda.lambda_function_name
   lambda_alias_name = var.lambda_alias_name
+  
+  # Path parts for API resources
+  primary_resource_path = var.primary_resource_path
+  secondary_resource_path = var.secondary_resource_path
 }
 
 module "lambda" {

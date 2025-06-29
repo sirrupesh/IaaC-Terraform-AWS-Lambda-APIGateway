@@ -32,3 +32,13 @@ variable "lambda_alias_name" {
   description = "Name of the Lambda function alias"
   type        = string
 }
+
+variable "primary_resource_path" {
+  description = "Path part for the primary API resource"
+  type        = string
+}
+
+variable "secondary_resource_path" {
+  description = "Path part for the secondary API resource"
+  type        = string
+}
