@@ -15,13 +15,11 @@ resource "aws_iam_role" "lambda_role" {
     ]
   })
   
-  tags = {
-    POC = "Rupesh" # Example tag, adjust as needed
-  }
+  tags = var.tags
 }
 
 # Attach AWS managed policies
 resource "aws_iam_role_policy_attachment" "lambda_execute" {
   role       = aws_iam_role.lambda_role.name
-  policy_arn = "arn:aws:iam::aws:policy/AWSLambdaExecute"
+  policy_arn = var.lambda_policy_arn
 }

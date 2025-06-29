@@ -51,6 +51,8 @@ module "iam" {
   
   role_name        = var.lambda_role_name
   role_description = var.lambda_role_description
+  tags             = var.tags
+  lambda_policy_arn = var.lambda_policy_arn
 }
 
 module "api_keys" {
@@ -60,4 +62,7 @@ module "api_keys" {
   usage_plan     = var.usage_plan
   api_id         = module.api_gateway.api_id
   api_stage_name = module.api_gateway.stage_name
+  api_key_enabled = var.api_key_enabled
+  throttle_settings = var.throttle_settings
+  quota_settings = var.quota_settings
 }
